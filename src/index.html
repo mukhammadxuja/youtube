@@ -2,13 +2,563 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <title>Basic HTML/Tailwind starter</title>
+    <title>Multi select Contact</title>
     <meta name="description" content="Basic HTML/Tailwind starter" />
     <meta name="author" content="Daily Dev Tips" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,400;0,400;0,600;0,700;0,800;0,900;1,400&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/splitting/dist/splitting.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/splitting/dist/splitting-cells.css"
+    />
+    <script src="https://unpkg.com/splitting/dist/splitting.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
     <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="../styles.css" />
   </head>
-  <body>
-    <div class="w-screen h-screen bg-daily-dev-tips flex items-center justify-center">Welcome</div>
+  <body class="relative">
+    <header id="section1" class="h-screen w-screen">
+      <div
+        class="relative flex items-center justify-center w-full h-screen overflow-hidden"
+      >
+        <video
+          id="video"
+          class="w-full h-full"
+          src="./assets/cube.mp4"
+          autoplay
+          loop
+          muted
+        ></video>
+        <div class="absolute top-1/2 -translate-y-1/2 z-10">
+          <div class="hero-marquee w-screen">
+            <div id="content" class="marquee">
+              <span class="clipped-text text-white">Start your project - </span>
+              <span class="clipped-text text-white">Start your project - </span>
+              <span class="clipped-text text-white">Start your project - </span>
+              <span class="clipped-text text-white">Start your project - </span>
+              <span class="clipped-text text-white">Start your project - </span>
+              <span class="clipped-text text-white">Start your project - </span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        id="content"
+        class="absolute w-screen bottom-0 p-20 flex justify-between"
+      >
+        <div>
+          <p class="text-lg text-gray-500 pb-4">
+            Tell us with that you're looking to achieve, using <br />
+            our self-help rom below
+          </p>
+          <div class="flex items-center space-x-2 group">
+            <span
+              class="flex items-center justify-center rounded-full mb-1s w-8 h-8 bg-white"
+              ><svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+                class="w-4 h-4"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M4.5 12h15m0 0l-6.75-6.75M19.5 12l-6.75 6.75"
+                />
+              </svg>
+            </span>
+            <a
+              id="next0"
+              href="#!"
+              class="text-sm text-white pb-1 border-b uppercase"
+              >Start your project</a
+            >
+          </div>
+        </div>
+        <div class="flex flex-col ml-auto">
+          <p class="text-lg text-right text-gray-500">contact directly</p>
+          <a href="#!" class="text-lg text-right text-white"
+            >hello@anvarov.studio</a
+          >
+        </div>
+      </div>
+    </header>
+
+    <section id="section2" class="h-screen w-screen p-10">
+      <div class="float-right">
+        <svg
+          id="close1"
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke-width="1.5"
+          stroke="currentColor"
+          class="w-10 h-10 cursor-pointer"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M6 18L18 6M6 6l12 12"
+          />
+        </svg>
+      </div>
+
+      <div class="flex flex-col justify-between h-full py-40 px-56">
+        <div>
+          <h1 class="text-black overflow-hidden">
+            <span id="reveal" class="opacity-0 inline-block translate-y-full"
+              >Start</span
+            >
+          </h1>
+          <p class="text-lg text-gray-700 font-medium overflow-hidden mt-4">
+            <span id="reveal" class="inline-block translate-y-full opacity-0">
+              We are exited to work with you! However, we need some details
+              about your</span
+            >
+          </p>
+          <p class="text-lg text-gray-700 font-medium overflow-hidden">
+            <span id="reveal" class="inline-block translate-y-full opacity-0">
+              project to guide you to the best possible solution
+            </span>
+          </p>
+        </div>
+        <div id="next1" class="continue flex items-center space-x-2">
+          <span
+            class="flex items-center justify-center rounded-full mb-1 w-8 h-8 bg-white"
+            ><svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+              class="w-4 h-4"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M4.5 12h15m0 0l-6.75-6.75M19.5 12l-6.75 6.75"
+              />
+            </svg>
+          </span>
+          <a
+            href="#!"
+            class="text-sm text-black font-semibold pb-1 border-b border-gray-600 uppercase"
+            >Continue 1</a
+          >
+        </div>
+      </div>
+    </section>
+
+    <section id="section3" class="h-screen w-screen p-10">
+      <div class="flex items-center justify-between">
+        <div id="back1" class="flex items-center space-x-2">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="currentColor"
+            class="w-5 h-5 cursor-pointer mb-1"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M4.5 10.5L12 3m0 0l7.5 7.5M12 3v18"
+            />
+          </svg>
+          <h4 class="text-sm uppercase font-bold cursor-pointer">Go back</h4>
+        </div>
+
+        <svg
+          id="close2"
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke-width="1.5"
+          stroke="currentColor"
+          class="w-10 h-10 cursor-pointer"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M6 18L18 6M6 6l12 12"
+          />
+        </svg>
+      </div>
+
+      <div class="flex flex-col justify-between h-full py-40 px-56">
+        <div>
+          <h1 class="text-black text-4xl leading-tight overflow-hidden">
+            <span id="reveal" class="inline-block translate-y-full opacity-0"
+              >Before we start,</span
+            >
+          </h1>
+          <h1 class="text-black text-4xl leading-tight overflow-hidden">
+            <span id="reveal" class="inline-block translate-y-full opacity-0"
+              >what is your name?</span
+            >
+          </h1>
+        </div>
+        <div class="flex items-center space-x-4">
+          <input
+            id="input"
+            class="w-full border-b border-gray-500 placeholder-gray-500 text-2xl outline-none bg-transparent py-3"
+            type="text"
+            placeholder="Type your first name"
+          />
+          <input
+            id="input"
+            class="w-full border-b border-gray-500 placeholder-gray-500 text-2xl outline-none bg-transparent py-3"
+            type="text"
+            placeholder="Type your last name"
+          />
+        </div>
+        <div
+          onclick="getName()"
+          id="next2"
+          class="continue flex items-center space-x-2"
+        >
+          <span
+            class="flex items-center justify-center rounded-full mb-1 w-8 h-8 bg-white"
+            ><svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+              class="w-4 h-4"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M4.5 12h15m0 0l-6.75-6.75M19.5 12l-6.75 6.75"
+              />
+            </svg>
+          </span>
+          <a
+            href="#!"
+            class="text-sm text-black font-semibold pb-1 border-b border-gray-600 uppercase"
+            >Continue</a
+          >
+        </div>
+      </div>
+    </section>
+
+    <section id="section4" class="h-screen w-screen p-10">
+      <div class="flex items-center justify-between">
+        <div id="back2" class="flex items-center space-x-2">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="currentColor"
+            class="w-5 h-5 cursor-pointer mb-1"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M4.5 10.5L12 3m0 0l7.5 7.5M12 3v18"
+            />
+          </svg>
+          <h4 class="text-sm uppercase font-bold cursor-pointer">Go back</h4>
+        </div>
+
+        <svg
+          id="close3"
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke-width="1.5"
+          stroke="currentColor"
+          class="w-10 h-10 cursor-pointer"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M6 18L18 6M6 6l12 12"
+          />
+        </svg>
+      </div>
+
+      <div class="flex flex-col justify-between h-full py-40 px-56">
+        <div>
+          <h1 class="text-black text-4xl leading-tight overflow-hidden">
+            <span id="reveal" class="inline-block translate-y-full opacity-0">
+              Nice to meet you!</span
+            >
+          </h1>
+          <h1 class="text-black text-4xl leading-tight overflow-hidden">
+            <span id="reveal" class="inline-block translate-y-full opacity-0"
+              >What service interest you?
+              <span class="text-xs text-gray-500"
+                >Select as many that apply</span
+              ></span
+            >
+          </h1>
+        </div>
+        <div>
+          <div class="flex items-center space-x-2">
+            <button id="btn" value="Branding" class="btn hover:bg-slate-300">
+              <span>Branding</span>
+            </button>
+            <button
+              id="btn"
+              value="Digital Strategy"
+              class="btn hover:bg-slate-300"
+            >
+              <span> Digital Strategy</span>
+            </button>
+            <button
+              id="btn"
+              value="Marketing Sites"
+              class="btn hover:bg-slate-300"
+            >
+              <span> Marketing Sites</span>
+            </button>
+            <button
+              id="btn"
+              value="SaaS Apps + Sites"
+              class="btn hover:bg-slate-300"
+            >
+              <span>SaaS Apps + Sites</span>
+            </button>
+            <button id="btn" value="eCommerce" class="btn hover:bg-slate-300">
+              <span>eCommerce</span>
+            </button>
+          </div>
+          <div class="flex items-center space-x-2 mt-2">
+            <button
+              id="btn"
+              value="Experience Sites"
+              class="btn hover:bg-slate-300"
+            >
+              <span> Experience Sites</span>
+            </button>
+            <button id="btn" value="UX Review" class="btn hover:bg-slate-300">
+              <span>UX Review</span>
+            </button>
+          </div>
+        </div>
+        <div id="next3" class="continue flex items-center space-x-2">
+          <span
+            class="flex items-center justify-center rounded-full mb-1 w-8 h-8 bg-white"
+            ><svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+              class="w-4 h-4"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M4.5 12h15m0 0l-6.75-6.75M19.5 12l-6.75 6.75"
+              />
+            </svg>
+          </span>
+          <a
+            href="#!"
+            class="text-sm text-black font-semibold pb-1 border-b border-gray-600 uppercase"
+            >Continue</a
+          >
+        </div>
+      </div>
+    </section>
+
+    <section id="section5" class="h-screen w-screen p-10">
+      <div class="flex items-center justify-between">
+        <div id="back3" class="flex items-center space-x-2">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="currentColor"
+            class="w-5 h-5 cursor-pointer mb-1"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M4.5 10.5L12 3m0 0l7.5 7.5M12 3v18"
+            />
+          </svg>
+          <h4 class="text-sm uppercase font-bold cursor-pointer">Go back</h4>
+        </div>
+
+        <svg
+          id="close4"
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke-width="1.5"
+          stroke="currentColor"
+          class="w-10 h-10 cursor-pointer"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M6 18L18 6M6 6l12 12"
+          />
+        </svg>
+      </div>
+
+      <div class="flex flex-col justify-between h-full py-40 px-56">
+        <div>
+          <h1 class="text-black text-4xl leading-tight overflow-hidden">
+            <span id="reveal" class="inline-block translate-y-full opacity-0"
+              >Let's talk budget
+            </span>
+          </h1>
+          <h1 class="text-black text-4xl leading-tight overflow-hidden">
+            <span id="reveal" class="inline-block translate-y-full opacity-0"
+              >What is yours?<span class="text-xs text-gray-500"
+                >You can select only one</span
+              ></span
+            >
+          </h1>
+        </div>
+        <div class="flex items-center space-x-2">
+          <button id="btn" value="$10k" class="btn hover:bg-slate-300">
+            <span></span> $10k
+          </button>
+          <button id="btn" value="$10-19k" class="btn hover:bg-slate-300">
+            <span></span> $10-19k
+          </button>
+          <button id="btn" value="$20-49k" class="btn hover:bg-slate-300">
+            <span></span> $20-49k
+          </button>
+          <button id="btn" value="$50-99k" class="btn hover:bg-slate-300">
+            <span></span> $50-99k
+          </button>
+          <button id="btn" value="$100k+" class="btn hover:bg-slate-300">
+            <span></span> $100k+
+          </button>
+        </div>
+        <div id="next4" class="continue flex items-center space-x-2">
+          <span
+            class="flex items-center justify-center rounded-full mb-1 w-8 h-8 bg-white"
+            ><svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+              class="w-4 h-4"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M4.5 12h15m0 0l-6.75-6.75M19.5 12l-6.75 6.75"
+              />
+            </svg>
+          </span>
+          <a
+            href="#!"
+            class="text-sm text-black font-semibold pb-1 border-b border-gray-600 uppercase"
+            >Continue</a
+          >
+        </div>
+      </div>
+    </section>
+
+    <section id="section6" class="h-screen w-screen p-10">
+      <div class="flex items-center justify-between">
+        <div id="back4" class="flex items-center space-x-2">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="currentColor"
+            class="w-5 h-5 cursor-pointer mb-1"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M4.5 10.5L12 3m0 0l7.5 7.5M12 3v18"
+            />
+          </svg>
+          <h4 class="text-sm uppercase font-bold cursor-pointer">Go back</h4>
+        </div>
+
+        <svg
+          id="close5"
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke-width="1.5"
+          stroke="currentColor"
+          class="w-10 h-10 cursor-pointer"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M6 18L18 6M6 6l12 12"
+          />
+        </svg>
+      </div>
+
+      <div class="flex flex-col justify-between h-full py-40 px-56">
+        <div>
+          <h1 class="text-black text-4xl leading-tight overflow-hidden">
+            <span
+              id="reveal"
+              class="flex items-center space-x-2 translate-y-full opacity-0"
+              ><span> Thank you! </span>
+              <img
+                class="w-10 h-10 ml-2"
+                src="./assets/smile.png"
+                alt="smile image"
+              />
+            </span>
+          </h1>
+          <h1 class="text-black text-4xl leading-tight overflow-hidden">
+            <span id="reveal" class="inline-block translate-y-full opacity-0"
+              >We will contact you shortly</span
+            >
+          </h1>
+        </div>
+        <div id="next5" class="continue flex items-center space-x-2">
+          <span
+            class="flex items-center justify-center rounded-full mb-1 w-8 h-8 bg-white"
+            ><svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+              class="w-4 h-4"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M4.5 12h15m0 0l-6.75-6.75M19.5 12l-6.75 6.75"
+              />
+            </svg>
+          </span>
+          <a
+            href="#!"
+            class="text-sm text-black font-semibold pb-1 border-b uppercase"
+            >Exit contact</a
+          >
+        </div>
+      </div>
+    </section>
+
+    <script type="module" src="./js/animation.js"></script>
+    <script type="module" src="./js/index.js"></script>
   </body>
 </html>
